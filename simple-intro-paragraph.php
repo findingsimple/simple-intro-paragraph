@@ -59,7 +59,7 @@ class Simple_Intro_Paragraph {
      */ 
     function add_styles_dropdown( $buttons ) {
 
-        if ( !in_array( 'styleselect', $buttons ) )
+        if ( ! in_array( 'styleselect', $buttons ) )
             array_unshift( $buttons, 'styleselect' );
 
         return $buttons;
