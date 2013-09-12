@@ -2,7 +2,7 @@
 /*
 Plugin Name: Simple Intro Paragraph
 Plugin URI: http://plugins.findingsimple.com
-Description: Simple plugin for addin an "intro" paragraph style to the wordpress editor for styling 
+Description: Simple plugin for adding an "intro" paragraph style to the WordPress editor for styling 
 Version: 1.0
 Author: Finding Simple
 Author URI: http://findingsimple.com
@@ -26,7 +26,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-if ( ! class_exists( 'Simple_Intro_Paragraph' ) ) :
+if ( ! class_exists( 'Simple_Intro_Paragraph' ) ) {
 
 /**
  * Plugin Main Class.
@@ -39,7 +39,7 @@ class Simple_Intro_Paragraph {
      */
     function Simple_Intro_Paragraph() {
         
-        add_action( 'init', array( &$this , 'simple_intro_paragraph_filter' ) );
+        add_action( 'init', array( $this , 'simple_intro_paragraph_filter' ) );
 
     }
 
@@ -48,9 +48,9 @@ class Simple_Intro_Paragraph {
      */
     function simple_intro_paragraph_filter() {
 
-        add_filter( 'mce_buttons_2', array( &$this , 'add_styles_dropdown' ) ); 
+        add_filter( 'mce_buttons_2', array( $this , 'add_styles_dropdown' ) ); 
 
-        add_filter( 'tiny_mce_before_init', array( &$this , 'add_styles_to_dropdown' ) );
+        add_filter( 'tiny_mce_before_init', array( $this , 'add_styles_to_dropdown' ) );
         
     }  
 
@@ -89,4 +89,4 @@ class Simple_Intro_Paragraph {
 
 $Simple_Intro_Paragraph = new Simple_Intro_Paragraph();
 
-endif;
+}
