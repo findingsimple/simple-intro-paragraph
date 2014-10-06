@@ -79,9 +79,20 @@ class Simple_Intro_Paragraph {
             )
         );
 
-        $settings['style_formats'] = json_encode( $style_formats );
+		/**
+		 * Merge old & new styles
+		 */
+		$settings['style_formats_merge'] = true;
 
-        return $settings;
+		/**
+		 *  Add new styles
+		 */
+		$settings['style_formats'] = json_encode( $style_formats );
+
+		/**
+		 * Return updates settings
+		 */
+		return $settings;
 
     }
 
